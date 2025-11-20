@@ -1,0 +1,103 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+############################################
+# LIGHT PASTEL POWERLINE THEME FOR RAJ
+############################################
+
+format = """
+[](#9AD1F7)\
+[  ](bg:#9AD1F7 fg:#0A0A0A)\
+[](bg:#A8E6FF fg:#9AD1F7)\
+$directory\
+[](fg:#A8E6FF bg:#FFD6E7)\
+$git_branch\
+$git_status\
+[](fg:#FFD6E7 bg:#FFF7A1)\
+$nodejs\
+$golang\
+$rust\
+$php\
+[](fg:#FFF7A1 bg:#C7FFD8)\
+$docker_context\
+[](fg:#C7FFD8 bg:#C0D7FF)\
+$time\
+[ ](fg:#C0D7FF)\
+\n$character
+"""
+
+############################################
+# DIRECTORY (FULL NAME, LIGHT CYAN BG)
+############################################
+[directory]
+style = "fg:#003049 bg:#A8E6FF"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ">/"
+
+
+############################################
+# GIT BRANCH (LIGHT PINK)
+############################################
+[git_branch]
+symbol = ""
+style = "fg:#5A065A bg:#FFD6E7"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "fg:#5A065A bg:#FFD6E7"
+format = "[($all_status$ahead_behind )]($style)"
+
+
+############################################
+# NODEJS (LIGHT YELLOW)
+############################################
+[nodejs]
+symbol = ""
+style = "fg:#6A4A00 bg:#FFF7A1"
+format = "[ $symbol $version ]($style)"
+
+
+############################################
+# GOLANG (LIGHT YELLOW)
+############################################
+[golang]
+symbol = ""
+style = "fg:#6A4A00 bg:#FFF7A1"
+format = "[ $symbol $version ]($style)"
+
+
+############################################
+# RUST (LIGHT YELLOW)
+############################################
+[rust]
+symbol = ""
+style = "fg:#6A4A00 bg:#FFF7A1"
+format = "[ $symbol $version ]($style)"
+
+
+############################################
+# PHP (LIGHT YELLOW)
+############################################
+[php]
+symbol = ""
+style = "fg:#6A4A00 bg:#FFF7A1"
+format = "[ $symbol $version ]($style)"
+
+
+############################################
+# DOCKER (LIGHT GREEN)
+############################################
+[docker_context]
+symbol = ""
+style = "fg:#004B23 bg:#C7FFD8"
+format = "[ $symbol $context ]($style)"
+
+
+############################################
+# TIME (LIGHT SKY BLUE)
+############################################
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#002060 bg:#C0D7FF"
+format = "[  $time ]($style)"
